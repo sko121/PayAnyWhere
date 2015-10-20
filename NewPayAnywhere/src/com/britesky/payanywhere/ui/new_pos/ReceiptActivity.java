@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.UUID;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
@@ -317,7 +318,6 @@ public class ReceiptActivity extends Activity {
 				try {
 					if (mBluetoothAdapter == null) {
 						
-
 						// mTipTextView.setText(getString(R.string.not_bluetooth_adapter));
 						Toast.makeText(mContext,
 								R.string.not_bluetooth_adapter,
@@ -325,13 +325,9 @@ public class ReceiptActivity extends Activity {
 
 					} else if (mBluetoothAdapter.isEnabled()) {
 						
-						
-						
 							TRACE.d("start.......");
 							connectBluetooth();
-						
-						
-						
+		
 //							String getName = mBluetoothAdapter.getName();
 //							pairedDevices = mBluetoothAdapter.getBondedDevices();
 //							while (mpairedDeviceList.size() > 1) {
@@ -480,11 +476,10 @@ public class ReceiptActivity extends Activity {
 	public SendMailThread thread;
 	private View.OnClickListener mClickListener = new View.OnClickListener() {
 
+		@SuppressLint("NewApi")
 		@Override
 		public void onClick(View v) {
-
 			switch (v.getId()) {
-
 			case R.id.buttonSendReceipt: {
 				if (mCBEnableEmailing.isChecked() == true) {// send email
 					// sendMail();
@@ -500,20 +495,24 @@ public class ReceiptActivity extends Activity {
 					}
 				} 
 				if (mCBEnablePrint.isChecked() == true) {// print receipt
+					
+					
+					if(mBluetoothSocket == null || !mBluetoothSocket.isConnected())
+					{
+						Toast.makeText(mContext,
+								"Please select a valid Printer first.",
+								Toast.LENGTH_LONG).show();
+						return;
+					}
+					
 					printSendOK = false;
-//					if (mSelectPrint == false) {
-//						Toast.makeText(mContext,
-//								"Please select a valid Printer first.",
-//								Toast.LENGTH_LONG).show();
-//						return;
-//					}
-
+					
 					TRACE.d("getOutputStream()........");
 					
 					try {
 						
 					  /*
-					   *   BitmapDrawable drawable =  (BitmapDrawable) getResources().getDrawable(R.drawable.test2);
+					    BitmapDrawable drawable =  (BitmapDrawable) getResources().getDrawable(R.drawable.test2);
 						Bitmap bitmap = drawable.getBitmap();
 						Bitmap compressPic = PicFromPrintUtils.compressPic(bitmap);
 		          
@@ -561,10 +560,8 @@ public class ReceiptActivity extends Activity {
 					msg.what = 1006;
 					mHandler.sendMessage(msg);
 					
+					}
 				}
-				
-				
-			}
 				break;
 
 			case R.id.buttonNoReceipt: {
