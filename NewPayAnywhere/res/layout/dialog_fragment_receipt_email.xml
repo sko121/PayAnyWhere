@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center"
+    android:baselineAligned="false"
+    android:imeOptions="flagNoExtractUi"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:weightSum="1.0" >
+
+        <LinearLayout
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15.0dip"
+            android:layout_marginTop="15.0dip"
+            android:layout_weight="1.0"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15.0dip"
+                android:orientation="horizontal"
+                android:weightSum="1.0" >
+
+                <AutoCompleteTextView
+                    android:id="@+id/emailAutoComplete1"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:dropDownHeight="100.0dip"
+                    android:hint="@string/tap_enter_email"
+                    android:imeOptions="actionNext"
+                    android:nextFocusDown="@+id/emailClear1"
+                    android:singleLine="true" />
+
+                <ImageView
+                    android:id="@+id/emailClear1"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:contentDescription="@string/clear_email"
+                    android:src="@drawable/x" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15.0dip"
+                android:orientation="horizontal"
+                android:weightSum="1.0" >
+
+                <AutoCompleteTextView
+                    android:id="@+id/emailAutoComplete2"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:dropDownHeight="100.0dip"
+                    android:hint="@string/tap_enter_email"
+                    android:imeOptions="actionNext"
+                    android:nextFocusDown="@+id/emailClear2"
+                    android:singleLine="true" />
+
+                <ImageView
+                    android:id="@+id/emailClear2"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:contentDescription="@string/clear_email"
+                    android:src="@drawable/x" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15.0dip"
+                android:orientation="horizontal"
+                android:weightSum="1.0" >
+
+                <AutoCompleteTextView
+                    android:id="@+id/emailAutoComplete3"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:dropDownHeight="100.0dip"
+                    android:hint="@string/tap_enter_email"
+                    android:imeOptions="actionNext"
+                    android:nextFocusDown="@+id/emailClear3"
+                    android:singleLine="true" />
+
+                <ImageView
+                    android:id="@+id/emailClear3"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:contentDescription="@string/clear_email"
+                    android:src="@drawable/x" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15.0dip"
+                android:orientation="horizontal"
+                android:weightSum="1.0" >
+
+                <AutoCompleteTextView
+                    android:id="@+id/emailAutoComplete4"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:dropDownAnchor="@+id/emailAutoComplete2"
+                    android:dropDownHeight="100.0dip"
+                    android:hint="@string/tap_enter_email"
+                    android:imeOptions="actionNext"
+                    android:nextFocusDown="@+id/emailClear4"
+                    android:singleLine="true" />
+
+                <ImageView
+                    android:id="@+id/emailClear4"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:contentDescription="@string/clear_email"
+                    android:src="@drawable/x" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:dividerPadding="0.0dip"
+        android:orientation="horizontal"
+        android:showDividers="middle"
+        android:weightSum="1.0" >
+
+        <Button
+            android:id="@+id/btnCancel"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="@string/cancel" />
+
+        <Button
+            android:id="@+id/btnSave"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="@string/save" />
+    </LinearLayout>
+
+</LinearLayout>

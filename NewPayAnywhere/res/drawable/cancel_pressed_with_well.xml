@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/button_well" />
+    <item android:drawable="@drawable/button_cancel_press" android:left="-5.0dip" android:top="-6.5dip" android:right="-4.5dip" android:bottom="-5.0dip" />
+</layer-list>

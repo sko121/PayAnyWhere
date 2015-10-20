@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/reviewitemwrapper"
+    android:layout_width="fill_parent"
+    android:layout_height="100.0dip"
+    android:padding="3.0dip" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@id/reviewimagecontainer"
+            android:layout_width="60.0dip"
+            android:layout_height="60.0dip"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="4.0dip" >
+
+            <ImageView
+                android:id="@id/reviewimage"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/cart_item_image_border"
+                android:scaleType="centerCrop" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/itemNameContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/reviewimagecontainer"
+            android:layout_alignTop="@id/reviewimagecontainer"
+            android:layout_marginLeft="10.0dip"
+            android:layout_toLeftOf="@+id/priceContainer"
+            android:layout_toRightOf="@id/reviewimagecontainer" >
+
+            <TextView
+                android:id="@id/reviewname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="@string/itemname"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@color/black" />
+
+            <LinearLayout
+                android:id="@+id/quantitySelectionContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@id/reviewname"
+                android:weightSum="1.0" >
+
+                <ImageButton
+                    android:id="@+id/quantitySubtractReview"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.2"
+                    android:adjustViewBounds="true"
+                    android:background="#00000000"
+                    android:padding="2.0dip"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/left" />
+
+                <TextView
+                    android:id="@+id/reviewquantitylabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.4"
+                    android:gravity="center_vertical"
+                    android:text="@string/quantityAmt"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textColor="@color/black"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/reviewquantity"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.6"
+                    android:gravity="center"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="@color/black" />
+
+                <ImageButton
+                    android:id="@+id/quantityAddReview"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.2"
+                    android:adjustViewBounds="true"
+                    android:background="#00000000"
+                    android:padding="2.0dip"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/right" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/priceContainer"
+            android:layout_width="90.0dip"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="4.0dip" >
+
+            <TextView
+                android:id="@+id/reviewpriceFixed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:gravity="center_horizontal"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/reviewpricetext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:ellipsize="end"
+                android:enabled="false"
+                android:gravity="right"
+                android:singleLine="true"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/taxedPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/reviewpriceFixed"
+                android:layout_alignRight="@id/reviewpriceFixed"
+                android:layout_below="@id/reviewpriceFixed"
+                android:gravity="center_horizontal"
+                android:text="@string/taxable"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@color/android_green" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

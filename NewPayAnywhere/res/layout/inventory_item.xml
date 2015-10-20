@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/reviewitemwrapper"
+    android:layout_width="fill_parent"
+    android:layout_height="100.0dip"
+    android:gravity="center_vertical" >
+
+    <RelativeLayout
+        android:id="@+id/reviewimagecontainer"
+        android:layout_width="90.0dip"
+        android:layout_height="90.0dip"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="5.0dip" >
+
+        <ImageView
+            android:id="@+id/reviewimage"
+            android:layout_width="82.0dip"
+            android:layout_height="82.0dip"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="4.0dip"
+            android:layout_marginTop="0.0dip"
+            android:scaleType="centerCrop"
+            android:src="@android:drawable/ic_menu_gallery" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/box1" />
+        
+        <TextView
+            android:id="@+id/quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignRight="@id/reviewimage"
+            android:shadowColor="@color/black"
+            android:shadowRadius="2.0"
+            android:textColor="@color/white"
+            android:textSize="60.0sp" />
+                
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="100.0dip"
+        android:layout_marginLeft="5.0dip"
+        android:layout_marginRight="10.0dip"
+        android:layout_toRightOf="@id/reviewimagecontainer"
+        android:gravity="left"
+        android:orientation="vertical"
+        android:weightSum="2.0" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/reviewname"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1.0"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="@string/itemname"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:textColor="@color/gray" />
+
+            <ImageButton
+                android:id="@+id/reviewdot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@null"
+                android:src="@drawable/ic_item_verticaldots"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0dip"
+            android:background="@color/android_green" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0" >
+
+            <TextView
+                android:id="@+id/review_category"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_weight="1.0"
+                android:ellipsize="end"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@color/soft_grey" />
+
+            <TextView
+                android:id="@+id/reviewprice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="@string/default_money"
+                android:textAppearance="?android:textAppearanceMedium" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

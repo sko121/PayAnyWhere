@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        
+        <Button 
+	        android:id="@+id/powerOnIccBtn"
+	        android:layout_weight=".5"
+	        android:layout_width="0dip"
+	        android:layout_height="wrap_content"
+	        android:text="@string/power_on_icc" />
+        
+        <Button 
+	        android:id="@+id/powerOffIccBtn"
+	        android:layout_weight=".5"
+	        android:layout_width="0dip"
+	        android:layout_height="wrap_content"
+	        android:text="@string/power_off_icc" />
+        
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        
+        <Button 
+	        android:id="@+id/apduBtn"
+	        android:layout_weight=".5"
+	        android:layout_width="0dip"
+	        android:layout_height="wrap_content"
+	        android:text="@string/send_apdu" />
+        
+        <EditText 
+	        android:id="@+id/apduEditText"
+	        android:layout_weight=".5"
+	        android:layout_width="0dip"
+	        android:layout_height="wrap_content"
+	        android:hint="APDU" />
+        
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+        
+        <EditText
+            android:id="@+id/statusEditText"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="5dip"
+	    	android:layout_marginRight="5dip"
+            android:editable="false" />
+        
+    </LinearLayout>
+</LinearLayout>
