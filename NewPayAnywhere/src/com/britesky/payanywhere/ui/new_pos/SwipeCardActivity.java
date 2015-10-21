@@ -1310,8 +1310,10 @@ public class SwipeCardActivity extends Activity {
 			}
 			dismissDialog();
 			statusEditText.setText(getString(R.string.device_unplugged));
+			
 			btnDisconnect.setEnabled(false);
 			doTradeButton.setEnabled(false);
+			mBtnAction.setVisibility(View.GONE);
 		}
 
 		@Override
@@ -1914,6 +1916,7 @@ public class SwipeCardActivity extends Activity {
 				doScanBTPos();
 			} else if (v == btnDisconnect) {
 				if (mAdapter != null) {
+					
 					mAdapter.cancelDiscovery();
 				}
 				close();

@@ -878,17 +878,20 @@ Try on another Android device."</string>
     <string name="title_activity_transaction_detail">TransactionDetailActivity</string>
     <string name="title_activity_manual_item">ManualItemActivity</string>
     <string name="title_activity_camera">CameraActivity</string>
-    <string name="start_copyright">Version 0.1\nCopyright @ www.xxxxx.com</string>
+
+<string name="start_copyright">Version 0.1\nCopyright @ www.xxxxx.com</string>
     <string name="crash_msg">nUnit , Block C,\n Street xxxx\n xxx xxxx\n Beijing, China\n Contact No: +086 xxxx xxxxxxx</string>
+  
     <string name="HOME_TITLE">Walk n Pay</string>
     <string name="SIGNUP_TITLE">Sign up</string>
     <string name="TabBarFirstTitle">Home</string>
     <string name="TabBarSecondTitle">Payment</string>
     <string name="TabBarThirdTitle">History</string>
+   
     <string name="TabBarFourthTitle">Help</string>
     <string name="SignUpSuccessed">Thank you for signing up with Walk n Pay! We will get in touch with you soon.</string>
     <string name="swipe">Swipe</string>
-    <string name="help_msg">Help</string>
+     <string name="help_msg">Help</string>
     <string name="Payment">Payment</string>
     <string name="History">History</string>
     <string name="Contact_Us">Contact Us</string>
@@ -1073,7 +1076,8 @@ Try on another Android device."</string>
     <string name="input_invalid">Input invalid.</string>
     <string name="crc_error">CRC Error.</string>
     <string name="comm_error">Communication Error.</string>
-    <string name="cashback_not_supported">Not support cash.</string>
+     <string name="cashback_not_supported">Not support cash.</string>
+    
     <string name="device_off">Device powered off.</string>
     <string name="get_info">Get Device Info</string>
     <string name="clear_log">Clear Log</string>
@@ -1153,8 +1157,9 @@ Try on another Android device."</string>
     <string name="send_mail">Send Mail</string>
     <string name="finish">Finish</string>
     <string name="start">Start</string>
-    <string name="sign">Sign</string>
-    <string name="get_pin">get pin</string>
+    <string name="sign">Sign</string>  
+    
+      <string name="get_pin">get pin</string>
     <string name="update">update</string>
     <string name="input_pin">Please input pin now.</string>
     <string name="swipe_card">Please swipe card now.</string>
