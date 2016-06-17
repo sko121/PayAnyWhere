@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.viewpagerindicator.TitlePageIndicator
+        android:id="@+id/titleIndicator"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="10.0dip"
+        android:textColor="@color/android_thick_orange"
+        android:textSize="18.0dip"
+        app:footerColor="@color/android_thick_orange"
+        app:footerIndicatorHeight="3.0dip"
+        app:footerIndicatorStyle="triangle"
+        app:footerLineHeight="1.0dip"
+        app:selectedBold="true"
+        app:selectedColor="@color/android_thick_orange" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0" />
+
+</LinearLayout>

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/colorsbg"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/device_off"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/device_off"
+        android:gravity="center"
+        android:text="@string/no_device_detected"
+        android:textColor="@color/colorccc"
+        android:textSize="14sp"
+        android:visibility="gone" >
+    </TextView>
+
+    <RelativeLayout
+        android:id="@+id/device_on"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/device_on"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/hand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/hand"
+                android:gravity="center" >
+            </Button>
+
+            <TextView
+                android:id="@+id/status_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/hand"
+                android:text="@string/device_ready"
+                android:textColor="@color/color_gray"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/device_swipe"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/margin_bottom"
+            android:paddingTop="@dimen/margin_common" >
+
+            <LinearLayout style="@style/a_line" />
+
+            <LinearLayout
+                style="@style/user_info_detail_item"
+                android:background="@drawable/common_item"
+                android:clickable="true" >
+
+                <TextView
+                    style="@style/user_info_detail_name"
+                    android:text="@string/status_com" />
+
+                <TextView
+                    android:id="@+id/status"
+                    style="@style/user_info_detail_content" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/a_line" />
+
+            <TextView style="@style/segmentation_hint_text" />
+
+            <LinearLayout style="@style/a_line" />
+
+            <LinearLayout
+                style="@style/user_info_detail_item"
+                android:background="@drawable/common_item"
+                android:clickable="true" >
+
+                <TextView
+                    style="@style/user_info_detail_name"
+                    android:text="@string/amount_com" />
+
+                <TextView
+                    android:id="@+id/amount"
+                    style="@style/user_info_detail_content" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/a_line" />
+
+            <LinearLayout
+                style="@style/user_info_detail_item"
+                android:background="@drawable/common_item"
+                android:clickable="true" >
+
+                <TextView
+                    style="@style/user_info_detail_name"
+                    android:text="@string/trans_type_com" />
+
+                <TextView
+                    android:id="@+id/trans_type"
+                    style="@style/user_info_detail_content" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/a_line" />
+
+            <TextView style="@style/segmentation_hint_text" />
+
+            <LinearLayout
+                android:id="@+id/card_info"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout style="@style/a_line" />
+
+                <LinearLayout
+                    style="@style/user_info_detail_item"
+                    android:background="@drawable/common_item"
+                    android:clickable="true" >
+
+                    <TextView
+                        style="@style/user_info_detail_name"
+                        android:text="@string/card_com" />
+
+                    <TextView
+                        android:id="@+id/card_num"
+                        style="@style/user_info_detail_content" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/a_line" />
+
+                <LinearLayout
+                    style="@style/user_info_detail_item"
+                    android:background="@drawable/common_item"
+                    android:clickable="true" >
+
+                    <TextView
+                        style="@style/user_info_detail_name"
+                        android:text="@string/name_com" />
+
+                    <TextView
+                        android:id="@+id/name"
+                        style="@style/user_info_detail_content" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/a_line" />
+
+                <LinearLayout
+                    style="@style/user_info_detail_item"
+                    android:background="@drawable/common_item"
+                    android:clickable="true" >
+
+                    <TextView
+                        style="@style/user_info_detail_name"
+                        android:text="@string/expiry_date_com" />
+
+                    <TextView
+                        android:id="@+id/expiry_date"
+                        style="@style/user_info_detail_content" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/a_line" />
+            </LinearLayout>
+
+            <TextView style="@style/segmentation_hint_text" />
+
+            <Button
+                android:id="@+id/action"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="9dip"
+                android:layout_marginRight="9dip"
+                android:background="@drawable/green_button_selector"
+                android:text="@string/start" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

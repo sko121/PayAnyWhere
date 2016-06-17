@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background_wood" >
+
+    <ImageView
+        android:id="@+id/printer_back"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="2.0px"
+        android:src="@drawable/printer_back" />
+
+    <LinearLayout
+        android:id="@+id/reviewcartlist_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/printer" >
+
+        <View
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.105" />
+
+        <ListView
+            android:id="@+id/reviewcartlist"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.795"
+            android:background="@drawable/receipt_body"
+            android:stackFromBottom="true" />
+
+        <View
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.1" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/printer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/printer_front" />
+
+    <LinearLayout
+        android:id="@+id/printer_contents"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/printer"
+        android:layout_alignTop="@id/printer"
+        android:orientation="vertical" >
+
+        <View
+            android:id="@+id/bufferView"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="0.2" />
+
+        <!-- <com.nabancard.ui.view.AutoResizeTextView -->
+        <TextView
+            android:id="@+id/checkoutTotal"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="0.34"
+            android:ellipsize="none"
+            android:gravity="center"
+            android:paddingLeft="45.0dip"
+            android:paddingRight="45.0dip"
+            android:singleLine="true"
+            android:text="@string/default_money"
+            android:textColor="@color/black"
+            android:textSize="45.0sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="0.09" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="0.22" >
+
+            <View
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.12" />
+
+            <ImageButton
+                android:id="@id/cancelButton"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="6.0dip"
+                android:layout_weight="0.19"
+                android:background="@drawable/cancel_button_selector"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ele_cart_x_button" />
+
+            <ImageButton
+                android:id="@+id/checkoutButton"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.57"
+                android:background="@drawable/generic_button_selector"
+                android:scaleType="fitEnd"
+                android:src="@drawable/proceed" />
+
+            <View
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.12" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="0.15" />
+    </LinearLayout>
+
+</RelativeLayout>

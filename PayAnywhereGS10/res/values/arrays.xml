@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="post_security_page_titles">
+        <item>Security Questions</item>
+        <item>Receipt Info</item>
+        <item>Holder</item>
+    </string-array>
+    <string-array name="img_src_entries">
+        <item>Take Photo</item>
+        <item>Choose Photo</item>
+    </string-array>
+    <string-array name="tip_default_entries">
+        <item>@string/tip_choice_1</item>
+        <item>@string/tip_choice_2</item>
+        <item>@string/tip_choice_3</item>
+        <item>@string/tip_choice_4</item>
+    </string-array>
+    <string-array name="attribute_names">
+        <item>Date</item>
+        <item>Total Amount</item>
+        <item>Tendered Amount</item>
+        <item>Change Amount</item>
+        <item>Notes</item>
+        <item>Requested Amount</item>
+        <item>Authorized Amount</item>
+        <item>Cash Back Amount</item>
+        <item>Card Process Type</item>
+        <item>Card Input Type</item>
+        <item>Card Type</item>
+        <item>Truncated PAN</item>
+        <item>Date Added</item>
+        <item>Name</item>
+        <item>Description</item>
+        <item>Is Taxable</item>
+        <item>Price Amount</item>
+        <item>Receipt Message</item>
+        <item>Category Name</item>
+        <item>Tag Name</item>
+        <item>Image</item>
+    </string-array>
+    <string-array name="rule_operators">
+        <item>&amp;lt;</item>
+        <item>&amp;lt;=</item>
+        <item>></item>
+        <item>>=</item>
+        <item>=</item>
+        <item>≠</item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item>begins with</item>
+        <item>ends with</item>
+        <item>matches</item>
+        <item>does not match</item>
+        <item>contains</item>
+        <item>does not contain</item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item>On or before</item>
+        <item>On or after</item>
+        <item>On date</item>
+        <item></item>
+        <item>Exists</item>
+        <item>Does not exist</item>
+        <item></item>
+        <item></item>
+        <item>Enabled</item>
+        <item>Disabled</item>
+        <item>true</item>
+        <item>false</item>
+        <item>On</item>
+        <item>Off</item>
+        <item></item>
+        <item>credit</item>
+        <item>debit</item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item>swiped</item>
+        <item>keyed</item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item>Visa</item>
+        <item>Mastercard</item>
+        <item>Discover</item>
+        <item>American Express</item>
+        <item>Diners Club</item>
+        <item>JCB</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="frequency">
+        <item>Daily</item>
+        <item>Weekly</item>
+        <item>Monthly</item>
+        <item>Yearly</item>
+    </string-array>
+    <string-array name="transaction_types">
+        <item>All Transactions</item>
+        <item>Cash</item>
+        <item>Cash Refund</item>
+        <item>Credit Card</item>
+        <item>Credit Card Refund</item>
+        <item>Tip</item>
+        <item>Pre-Authorization</item>
+        <item>Void</item>
+        <item>Inventory Items</item>
+    </string-array>
+    <string-array name="conflict_type">
+        <item>Warning:</item>
+        <item>Conflict:</item>
+    </string-array>
+    <string-array name="conflict_help">
+        <item>The same item on a single-choice list was selected mulitple times. Remove one or more redundant rules to resolve this warning.</item>
+        <item>Different items selected on the same single-choice list. Remove one or more of the conflicting rules or change the filter to Match Any to resolve this conflict.</item>
+        <item>The characters used to constrain Begins with either equal eachother or contain eachother. Remove one or more of the redundant rules to resolve the warning.</item>
+        <item>Different characters used to constrain Begins with, thus the filter will give no results. Remove one or more of the conflicting rules, or switch the filter to Match Any to resolve the conflict.</item>
+        <item>The characters used to constrain Ends with either equal eachother or contain eachother. Remove one or more of the redundant rules to resolve the warning.</item>
+        <item>Different characters used to constrain Ends with, thus the filter will give no results. Remove one or more of the conflicting rules, or switch the filter to Match Any to resolve the conflict.</item>
+        <item>Duplicate word is equal to rules created. Remove one or more of the redundant rules to resolve the warning.</item>
+        <item>The same word is being checked if it equals 2 or more values, so the filter will return no results. Remove one or more of the conflicting rules, or change to Match Any to resolve the conflict.</item>
+        <item>Duplicate word contains rules created. Remove one or more of the redundant rules to resolve the warning.</item>
+        <item>Rules constrain a word to both contain and not contain the same characters. One or more conflicting rules need to be removed or edited to resolve the conflict. Or you can change the filter to Match Any</item>
+        <item>Duplicate date equals rules created. Remove one or more of the redundant rules to resolve the warning.</item>
+        <item>Multiple on date rules created with different dates. The filter will return no results. One or more of the conflicting rules need to be removed or edited to resolve the conflict. Or you can change the filter to Match Any</item>
+        <item>Multiple on or after date rules created. The filter will always return the smallest date range and ignore the larger range. Remove one or more of the overlapping rules to resolve the warning.</item>
+        <item>Multiple on or before date rules created. The filter will always return the smallest date range and ignore the larger range. Remove one or more of the overlapping rules to resolve the warning.</item>
+        <item>Multiple multiple date ranges given that will never cross. The filter will return no results. Remove or edit one or more of the date range rules, or change to Match Any to resolve the conflict.</item>
+        <item>Mutli-day ranges ignored by single-day constraint. The filter will only return matches for the single day. Remove or edit the redundant rules to resolve the warning.</item>
+        <item>Duplicate rules created. Remove or edit one or more of the redundant rules to resolve the warning.</item>
+        <item>Multiple rules are limiting a number value to be equal to different values. The filter will return no results. Remove or edit one or more of the conflicting rules, or change to Match Any to resolve the conflict.</item>
+        <item>Multiple number ranges given that contain eachother. The filter will always return the smallest range and ignore the larger range(s). Remove or edit one or more of the overlapping rules to resolve the conflict.</item>
+        <item>A rule that restricts a number to one value is outside of another rule that restricts the number to a range of values. The filter will return no results. Remove or edit one or more of the conflicting rules, or change to Match Any to resolve the conflict.</item>
+        <item>A rule that restricts a number to one value is inside of another rule that restricts the number to a range of values. The filter will return only the results the singular value and will ignore the range. Remove or edit one or more of the redundant rules to resolve the warning.</item>
+        <item>A rule that restricts a number to a range already exludes a value that another rule says it does not equal. The does not equal rule is ignored. Remove or edit one or more of the redundant rules to resolve this warning.</item>
+        <item>Mulitple rules are restricting a number to both equal and not equal the same value. The filter will return no results. Remove or edit one or more of the conflicting rules, or change to Match Any to resolve the conflict.</item>
+        <item>Multiple rules with value ranges are ascending/descending in opposite directions and will never cross. The filter will return no results. Remove or edit one or more of the conflicting rules, or change to Match Any to resolve the conflict.</item>
+    </string-array>
+    <string-array name="search_spinner_inventory">
+        <item>All</item>
+        <item>Name</item>
+        <item>Description</item>
+        <item>Category</item>
+        <item>Tag</item>
+    </string-array>
+    <string-array name="search_spinner_transactions">
+        <item>All</item>
+        <item>Transaction Type</item>
+        <item>Last 4 Digits</item>
+        <item>Customer Name</item>
+        <item>Customer Email</item>
+        <item>Invoice Number</item>
+        <item>Authorization Code</item>
+    </string-array>
+    <string-array name="search_spinner_customers">
+        <item>All</item>
+        <item>Name</item>
+        <item>Email</item>
+    </string-array>
+    <string-array name="attributes">
+        <item>Tags</item>
+        <item>Categories</item>
+    </string-array>
+    <string-array name="share_options">
+        <item>@string/email</item>
+        <item>@string/print</item>
+    </string-array>
+    <string-array name="state_codes">
+        <item>AK</item>
+        <item>AL</item>
+        <item>AR</item>
+        <item>AZ</item>
+        <item>CA</item>
+        <item>CO</item>
+        <item>CT</item>
+        <item>DE</item>
+        <item>FL</item>
+        <item>GA</item>
+        <item>HI</item>
+        <item>IA</item>
+        <item>ID</item>
+        <item>IL</item>
+        <item>IN</item>
+        <item>KS</item>
+        <item>KY</item>
+        <item>LA</item>
+        <item>MA</item>
+        <item>MD</item>
+        <item>ME</item>
+        <item>MI</item>
+        <item>MN</item>
+        <item>MO</item>
+        <item>MS</item>
+        <item>MT</item>
+        <item>NC</item>
+        <item>ND</item>
+        <item>NE</item>
+        <item>NH</item>
+        <item>NJ</item>
+        <item>NM</item>
+        <item>NV</item>
+        <item>NY</item>
+        <item>OH</item>
+        <item>OK</item>
+        <item>OR</item>
+        <item>PA</item>
+        <item>RI</item>
+        <item>SC</item>
+        <item>SD</item>
+        <item>TN</item>
+        <item>TX</item>
+        <item>UT</item>
+        <item>VA</item>
+        <item>VT</item>
+        <item>WA</item>
+        <item>WI</item>
+        <item>WV</item>
+        <item>WY</item>
+        <item>DC</item>
+    </string-array>
+    <string-array name="state_names">
+        <item>Alaska</item>
+        <item>Alabama</item>
+        <item>Arkansas</item>
+        <item>Arizona</item>
+        <item>California</item>
+        <item>Colorado</item>
+        <item>Connecticut</item>
+        <item>Delaware</item>
+        <item>Florida</item>
+        <item>Georgia</item>
+        <item>Hawaii</item>
+        <item>Iowa</item>
+        <item>Idaho</item>
+        <item>Illinois</item>
+        <item>Indiana</item>
+        <item>Kansas</item>
+        <item>Kentucky</item>
+        <item>Louisiana</item>
+        <item>Massachusetts</item>
+        <item>Maryland</item>
+        <item>Maine</item>
+        <item>Michigan</item>
+        <item>Minnesota</item>
+        <item>Missouri</item>
+        <item>Mississippi</item>
+        <item>Montana</item>
+        <item>North Carolina</item>
+        <item>North Dakota</item>
+        <item>Nebraska</item>
+        <item>New Hampshire</item>
+        <item>New Jersey</item>
+        <item>New Mexico</item>
+        <item>Nevada</item>
+        <item>New York</item>
+        <item>Ohio</item>
+        <item>Oklahoma</item>
+        <item>Oregon</item>
+        <item>Pennsylvania</item>
+        <item>Rhode Island</item>
+        <item>South Carolina</item>
+        <item>South Dakota</item>
+        <item>Tennessee</item>
+        <item>Texas</item>
+        <item>Utah</item>
+        <item>Virginia</item>
+        <item>Vermont</item>
+        <item>Washington</item>
+        <item>Wisconsin</item>
+        <item>West Virginia</item>
+        <item>Wyoming</item>
+        <item>District of Columbia</item>
+    </string-array>
+    <string-array name="pin_settings">
+        <item>Off</item>
+        <item>@string/thirty_sec</item>
+        <item>@string/one_min</item>
+        <item>@string/five_min</item>
+        <item>@string/thirty_min</item>
+        <item>@string/one_hr</item>
+        <item>@string/four_hrs</item>
+        <item>@string/twelve_hrs</item>
+        <item>@string/twenty_four_hrs</item>
+    </string-array>
+    <string-array name="camera_selector">
+        <item>@string/camera_back</item>
+        <item>@string/camera_front</item>
+    </string-array>
+</resources>

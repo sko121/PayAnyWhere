@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical" >
+
+
+    <TextView
+        style="@style/layout_item_text"
+        android:layout_marginLeft="25dip"
+        android:layout_marginTop="20dip"
+        android:text="@string/SelectTransactionToVoid" />
+
+    <LinearLayout
+        style="@style/lv_bg_style"
+        android:layout_marginTop="20dip" >
+
+        <com.britesky.ipos.utils.CornerListView
+            android:id="@+id/lv_transaction"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_bg_listview"
+            android:cacheColorHint="@null"
+            android:divider="@color/lightGray"
+            android:dividerHeight="1px" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="30dip"
+        android:background="@drawable/shape_bg_listview" >
+
+        <TextView
+            style="@style/layout_item_text"
+            android:layout_marginLeft="20dip"
+            android:layout_marginRight="5dip"
+            android:gravity="left|center"
+            android:text="@string/ReceiptNoFormat" />
+
+        <EditText
+            android:id="@+id/edt_receiptNo"
+            style="@style/edit_style"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="15dip"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="left"
+            android:hint="Fill in receipt No."
+            android:numeric="integer"
+            android:singleLine="true"
+            android:textColor="@color/yellow" />
+    </LinearLayout>
+
+</LinearLayout>

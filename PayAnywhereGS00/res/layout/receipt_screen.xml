@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:id="@+id/receipt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/receipt_frame"
+        android:orientation="vertical"
+        android:paddingBottom="30.0dip"
+        android:paddingRight="15.0dip" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="10.0dip"
+            android:layout_marginTop="15.0dip"
+            android:orientation="horizontal"
+            android:weightSum="1.0" >
+
+            <TextView
+                android:id="@+id/textViewDate"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:gravity="left|center"
+                android:textAppearance="?android:textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/textViewInvoice"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:gravity="right|center"
+                android:textAppearance="?android:textAppearanceSmall" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="10.0dip"
+            android:orientation="horizontal"
+            android:weightSum="1.0" >
+
+            <TextView
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:gravity="left|center"
+                android:text="Total:"
+                android:textAppearance="?android:textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/textViewTotalAmount"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:gravity="right|center"
+                android:text="@string/zero_dollar"
+                android:textAppearance="?android:textAppearanceMedium" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="10.0dip"
+            android:layout_marginTop="10.0dip"
+            android:orientation="horizontal"
+            android:weightSum="1.0" >
+
+            <EditText
+                android:id="@+id/editTextFirstName"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5.0dip"
+                android:layout_weight="0.5"
+                android:ems="10"
+                android:gravity="left|center"
+                android:hint="@string/first_name_hint"
+                android:inputType="textVisiblePassword"
+                android:padding="5.0dip"
+                android:singleLine="true"
+                android:textAppearance="?android:textAppearanceLarge" />
+
+            <EditText
+                android:id="@+id/editTextLastName"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5.0dip"
+                android:layout_weight="0.5"
+                android:ems="10"
+                android:gravity="left|center"
+                android:hint="@string/last_name_hint"
+                android:inputType="textVisiblePassword"
+                android:padding="5.0dip"
+                android:singleLine="true"
+                android:textAppearance="?android:textAppearanceLarge" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="10.0dip"
+            android:layout_marginTop="10.0dip"
+            android:background="@drawable/box"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/emailRelativeLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10.0dip"
+                android:paddingLeft="5.0dip" >
+
+                <TextView
+                    android:id="@+id/textViewEmailLable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:drawableTop="@drawable/email_icon"
+                    android:gravity="center"
+                    android:text="@string/email_cap"
+                    android:textColor="@color/orange" />
+
+                <CheckBox
+                    android:id="@+id/checkBoxEnableEmailing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="10.0dip"
+                    android:button="@drawable/check_box"
+                    android:padding="10.0dip" />
+
+                <RelativeLayout
+                    android:id="@+id/emailNumberBubbleContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/textViewEmailLable"
+                    android:layout_marginLeft="150.0dip"
+                    android:visibility="invisible" >
+
+                    <ImageView
+                        android:id="@+id/imageViewEmailNumberBubble"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="@string/Actionbar_Cart"
+                        android:src="@drawable/red_dot" />
+
+                    <TextView
+                        android:id="@+id/textViewEmailNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:paddingBottom="8.0dip"
+                        android:paddingLeft="1.0dip"
+                        android:text="@string/number_zero"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <AutoCompleteTextView
+                android:id="@+id/autoCompleteTextViewEmail"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:dropDownHeight="250.0dip"
+                android:ems="10"
+                android:inputType="textAutoComplete"
+                android:singleLine="true"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/buttonAddAdditionalEmails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15.0dip"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:layout_marginTop="10.0dip"
+                android:background="@drawable/button"
+                android:padding="10.0dip"
+                android:text="@string/add_additional_emails"
+                android:textColor="@android:color/white"
+                android:textSize="15.0sp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="10.0dip"
+            android:layout_marginTop="10.0dip"
+            android:background="@drawable/box"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="10.0dip"
+            android:paddingTop="15.0dip" >
+
+            <TextView
+                android:id="@+id/textViewPrintLable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/printer_icon"
+                android:gravity="center"
+                android:text="@string/print_cap"
+                android:textColor="@color/orange" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <CheckBox
+                    android:id="@+id/checkBoxStarPrinters"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/check_box"
+                    android:paddingBottom="10.0dip"
+                    android:paddingTop="10.0dip"
+                    android:text="@string/print_header"
+                    android:textAppearance="?android:textAppearanceSmall" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textViewPrintStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dip"
+                android:gravity="center"
+                android:text="@string/disconnect"
+                android:textColor="@color/gray"
+                android:textSize="15sp" />
+
+            <Spinner
+                android:id="@+id/deviceSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15.0dip"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="10.0dip"
+            android:layout_marginTop="15.0dip"
+            android:orientation="horizontal"
+            android:weightSum="1.0" >
+
+            <Button
+                android:id="@+id/buttonSendReceipt"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5.0dip"
+                android:layout_weight="0.5"
+                android:background="@drawable/green_button_selector"
+                android:enabled="false"
+                android:text="@string/send_receipt"
+                android:textColor="@android:color/white"
+                android:textSize="15.0sp" />
+
+            <Button
+                android:id="@+id/buttonNoReceipt"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5.0dip"
+                android:layout_weight="0.5"
+                android:background="@drawable/button"
+                android:text="@string/no_receipt"
+                android:textColor="@android:color/white"
+                android:textSize="15.0sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

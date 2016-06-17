@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/expressiconwrapper"
+    android:layout_width="wrap_content"
+    android:layout_height="100.0dip" >
+
+    <ImageButton
+        android:id="@+id/expressimage"
+        android:layout_width="90.0dip"
+        android:layout_height="90.0dip"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="5.0dip"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginRight="5.0dip"
+        android:layout_marginTop="5.0dip"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        android:src="@drawable/button_express" />
+
+    <LinearLayout android:gravity="left" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="100.0dip" android:layout_marginLeft="5.0dip" android:layout_marginRight="10.0dip" android:weightSum="2.0" android:layout_toRightOf="@+id/expressimage">
+
+        <TextView
+            android:id="@+id/expressname"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.0"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="@string/express_sale"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textColor="@color/gray" />
+
+        <View android:background="@color/android_green" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+
+        <TextView
+            android:id="@+id/expressdescription"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.0"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:text="@string/express_description"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="@color/gray" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/blankclick"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@null"
+        android:src="@null" />
+
+</RelativeLayout>

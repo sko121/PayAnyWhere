@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:paddingBottom="@dimen/margin_bottom" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dip"
+                android:layout_marginLeft="3dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="20dip" >
+
+                <TextView
+                    android:id="@+id/txt_tid"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="@string/crash_msg"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="3dip"
+                android:layout_marginRight="10dip"
+                android:background="@color/lightGray" />
+
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dip"
+                android:stretchColumns="0,1" >
+
+                <TableRow android:padding="3dip" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dip"
+                        android:gravity="left"
+                        android:text="@string/RECEIPT_NO."
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:id="@+id/txt_receipt"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dip"
+                        android:gravity="right"
+                        android:text="1204180008"
+                        android:textColor="#000000" />
+                </TableRow>
+
+                <TableRow android:padding="3dip" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dip"
+                        android:gravity="left"
+                        android:text="@string/VISA"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:id="@+id/txt_visa"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dip"
+                        android:gravity="right"
+                        android:text="********3979"
+                        android:textColor="#000000" />
+                </TableRow>
+
+                <TableRow android:padding="3dip" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dip"
+                        android:gravity="left"
+                        android:text="@string/EXPIRY_DATE"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:id="@+id/txt_expiry"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dip"
+                        android:gravity="right"
+                        android:text="**/****"
+                        android:textColor="#000000" />
+                </TableRow>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_marginBottom="6dip"
+                    android:layout_marginLeft="3dip"
+                    android:layout_marginRight="10dip"
+                    android:layout_marginTop="6dip"
+                    android:background="@color/lightGray" />
+
+                <TableRow android:padding="3dip" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dip"
+                        android:gravity="left"
+                        android:text="@string/DATE"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:id="@+id/txt_data"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dip"
+                        android:gravity="right"
+                        android:text="2012"
+                        android:textColor="#000000" />
+                </TableRow>
+
+                <TableRow android:padding="3dip" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dip"
+                        android:gravity="left"
+                        android:text="@string/APPROX_LOCATION"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dip"
+                        android:gravity="right"
+                        android:textColor="#000000" />
+                </TableRow>
+
+                <TableRow android:padding="3dip" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dip"
+                        android:gravity="left"
+                        android:text="@string/APPROVAL_CODE"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dip"
+                        android:gravity="right"
+                        android:text="006952"
+                        android:textColor="#000000" />
+                </TableRow>
+
+                <TableRow android:padding="3dip" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dip"
+                        android:gravity="left"
+                        android:text="@string/App:"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:id="@+id/txt_app"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dip"
+                        android:gravity="right"
+                        android:text="006952"
+                        android:textColor="#000000" />
+                </TableRow>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_marginBottom="6dip"
+                    android:layout_marginLeft="3dip"
+                    android:layout_marginRight="10dip"
+                    android:layout_marginTop="6dip"
+                    android:background="@color/lightGray" />
+
+                <TableRow android:padding="3dip" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dip"
+                        android:gravity="left"
+                        android:text="@string/Sales_title"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:id="@+id/txt_sales"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dip"
+                        android:gravity="right"
+                        android:text="SGD0.00"
+                        android:textColor="#000000" />
+                </TableRow>
+
+                <TableRow android:padding="3dip" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dip"
+                        android:gravity="left"
+                        android:text="TOTAL"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txt_total"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dip"
+                        android:gravity="right"
+                        android:text="Dollor0.00"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_marginBottom="6dip"
+                    android:layout_marginLeft="3dip"
+                    android:layout_marginRight="3dip"
+                    android:layout_marginTop="6dip"
+                    android:background="@color/lightGray" />
+
+                <ImageView
+                    android:id="@+id/img_thumbnail"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_margin="2.0dip"
+                    android:gravity="center"
+                    android:scaleType="fitXY"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/action"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="9dip"
+                    android:layout_marginRight="9dip"
+                    android:layout_marginTop="9dip"
+                    android:background="@drawable/green_button_selector"
+                    android:text="@string/sign" />
+
+                <Button
+                    android:id="@+id/send_mail"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="9dip"
+                    android:layout_marginRight="9dip"
+                    android:layout_marginTop="9dip"
+                    android:background="@drawable/green_button_selector"
+                    android:text="@string/send_mail"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/finish"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="9dip"
+                    android:layout_marginRight="9dip"
+                    android:layout_marginTop="9dip"
+                    android:background="@drawable/green_button_selector"
+                    android:text="@string/finish"
+                    android:visibility="gone" />
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

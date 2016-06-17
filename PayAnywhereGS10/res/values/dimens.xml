@@ -1,0 +1,28 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="act_btn_width">60.0dip</dimen>
+    <dimen name="act_btn_height">40.0dip</dimen>
+    <dimen name="action_bar_height">50.0dip</dimen>
+    <dimen name="large_text_size">16.0dip</dimen>
+    <dimen name="small_text_size">14.0dip</dimen>
+    <dimen name="basic_text_size">15.0dip</dimen>
+    <dimen name="text_size_17">17.0sp</dimen>
+    <dimen name="detail_margin">6.0dip</dimen>
+    <dimen name="margin_common">21.0dip</dimen>
+    <dimen name="margin_bottom">30.0dip</dimen>
+    <dimen name="body_margin">12.0dip</dimen>
+    <dimen name="big_margin">36.0dip</dimen>
+    <dimen name="margin_12">12.0dip</dimen>
+    <dimen name="popmenu_width">100.0dip</dimen>
+    <dimen name="slidingmenu_offset">60dp</dimen>
+    <dimen name="list_padding">10dp</dimen>
+    <dimen name="shadow_width">15dp</dimen>
+
+    <integer name="num_cols">1</integer>
+
+    <dimen name="margin_bottom">30.0dip</dimen>
+</resources>

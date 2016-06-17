@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="vpi__background_holo_dark">#ff000000</color>
+    <color name="vpi__background_holo_light">#fff3f3f3</color>
+    <item type="color" name="vpi__bright_foreground_holo_dark">@color/vpi__background_holo_light</item>
+    <item type="color" name="vpi__bright_foreground_holo_light">@color/vpi__background_holo_dark</item>
+    <color name="vpi__bright_foreground_disabled_holo_dark">#ff4c4c4c</color>
+    <color name="vpi__bright_foreground_disabled_holo_light">#ffb2b2b2</color>
+    <item type="color" name="vpi__bright_foreground_inverse_holo_dark">@color/vpi__bright_foreground_holo_light</item>
+    <item type="color" name="vpi__bright_foreground_inverse_holo_light">@color/vpi__bright_foreground_holo_dark</item>
+    <color name="default_circle_indicator_fill_color">#ffffffff</color>
+    <color name="default_circle_indicator_page_color">#00000000</color>
+    <color name="default_circle_indicator_stroke_color">#ffdddddd</color>
+    <color name="default_line_indicator_selected_color">#ff33b5e5</color>
+    <color name="default_line_indicator_unselected_color">#ffbbbbbb</color>
+    <color name="default_title_indicator_footer_color">#ffff6600</color>
+    <color name="default_title_indicator_selected_color">#ff000000</color>
+    <color name="default_title_indicator_text_color">#bb000000</color>
+    <color name="default_underline_indicator_selected_color">#ff33b5e5</color>
+    <color name="abs__background_holo_dark">#ff000000</color>
+    <color name="abs__background_holo_light">#fff3f3f3</color>
+    <item type="color" name="abs__bright_foreground_holo_dark">@color/abs__background_holo_light</item>
+    <item type="color" name="abs__bright_foreground_holo_light">@color/abs__background_holo_dark</item>
+    <color name="abs__bright_foreground_disabled_holo_dark">#ff4c4c4c</color>
+    <color name="abs__bright_foreground_disabled_holo_light">#ffb2b2b2</color>
+    <item type="color" name="abs__bright_foreground_inverse_holo_dark">@color/abs__bright_foreground_holo_light</item>
+    <item type="color" name="abs__bright_foreground_inverse_holo_light">@color/abs__bright_foreground_holo_dark</item>
+    <color name="abs__holo_blue_light">#ff33b5e5</color>
+    <color name="white">#ffffffff</color>
+    <color name="yellow">#ffffff00</color>
+    <color name="fuchsia">#ffff00ff</color>
+    <color name="red">#ffff4747</color>
+    <color name="silver">#ffc0c0c0</color>
+    <color name="gray">#ff808080</color>
+    <color name="olive">#ff808000</color>
+    <color name="purple">#ff800080</color>
+    <color name="maroon">#ff800000</color>
+    <color name="aqua">#ff00ffff</color>
+    <color name="lime">#ff00ff00</color>
+    <color name="teal">#ff008080</color>
+    <color name="green">#ff0be000</color>
+    <color name="blue">#ff0000ff</color>
+    <color name="navy">#ff000080</color>
+    <color name="black">#ff000000</color>
+    <color name="android_green">#fff8981d</color>
+    <color name="pa_orange">#ffffbb33</color>
+    <color name="honeycombish_blue">#ff58baed</color>
+    <color name="soft_grey">#ffb4b2b2</color>
+    <color name="hard_grey">#ff898989</color>
+    <color name="grey48">#ff7a7a7a</color>
+    <color name="background">#ffefefef</color>
+    <color name="holo_blue_bright">#ff00ddff</color>
+    <color name="android_trans_orange">#66ff8800</color>
+    <color name="android_thick_orange">#ffff8800</color>
+    <color name="opaque_grey">#55333333</color>
+    <color name="orange">#ffff7713</color>
+    <color name="orange_trans">#99ff8800</color>
+    <item type="color" name="pattern_unlock_line_color">@color/android_thick_orange</item>
+    <color name="white_transparent">#44ffffff</color>
+    <color name="text_orange">#ffff7713</color>
+    <color name="dark_gray">#ff333333</color>
+    <color name="payanywhere">#fff8981d</color>
+    <color name="phoneswipe">#ffd5e04d</color>
+    <color name="super_light_grey">#ffececec</color>
+    <color name="stroke_grey">#ff939393</color>
+    <color name="actionbar_light_grey">#ff6e6d6e</color>
+    <color name="actionbar_dark_grey">#ff434244</color>
+    <color name="tabbar_dark_grey_bg">#ffa6a6a5</color>
+    <color name="tabbar_dark_grey_text">#ff5f5f5f</color>
+    <color name="pin_selected">#ff86837e</color>
+    <color name="pin_not_selected">#ffd4d4d4</color>
+    <color name="main_menu_background_color">#dd4f4e50</color>
+    <color name="top_item_background_color">#ff8f8c8a</color>
+    <color name="cart_background">#ffd7d7d7</color>
+    <color name="cart_outline_stroke">#ffa1a1a1</color>
+    <color name="swipe_text">#ffbbb9b8</color>
+    <color name="text_title_color">#ff6a6967</color>
+    <color name="menu_divider">#ff3e3638</color>
+    <color name="gray_text">#ff908e8b</color>
+    <color name="tip_item">#ff272324</color>
+    <color name="tip_title">#ff2e2e34</color>
+    
+    <color name="backgroud">#fff3f3f3</color>
+    <color name="black_trans">#33000000</color>
+    <color name="color_gray">#ff666666</color>
+    <color name="colorccc">#ffcccccc</color>
+    <color name="colord8">#ffd8d8d8</color>
+    <color name="coloreee">#ffeeeeee</color>
+    <color name="colortrans">#00000000</color>
+    <color name="lightgrey">#ff888888</color>
+    <color name="light_gray">#ff999999</color>
+    <color name="colorWhite">#ffffffff</color>
+    <color name="colorBlue">#ff2277bb</color>
+    <color name="colorDarkBlue">#ff385487</color>
+    <color name="list_select_color">#ffdfdfdf</color>
+    <color name="white">#ffffffff</color>
+    <color name="black">#ff000000</color>
+    <color name="blackbar">#ff343434</color>
+    <color name="list_header_bottom">#ffdddddd</color>
+    <color name="list_header">#ffdfdfdf</color>
+    <color name="itemname9">#ff999999</color>
+    <color name="itemname">#ff666666</color>
+    <color name="itembg">#fff3f3f3</color>
+    <color name="itemvalue">#ff333333</color>
+    <color name="color111">#ff1f3a55</color>
+    <color name="colorbb">#184684</color>
+    <color name="colormain">#0469be</color>
+    <color name="color777">#777777</color>
+    <color name="colorslide">#03df9e</color>
+    <color name="lightGray">#D3D3D3</color>
+    <color name="gray">#808080</color>
+    <color name="help_color">#000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="pay_color">#005ab5</color>
+    <color name="yellow">#FFC125</color>
+    <color name="setting_black">#080808</color>
+    <color name="wheel_color">#005ab5</color>
+    <color name="blacks">#000000</color>
+    <color name="slidenor">#767676</color>
+    <color name="setting_black">#080808</color>
+    <color name="yellow">#FFC125</color>
+    <color name="right">#161823</color>
+    <color name="left">#00baff</color>
+    <color name="colorsbg">#ffeeeeee</color>
+    <color name="colorbar">#ff124280</color>
+</resources>

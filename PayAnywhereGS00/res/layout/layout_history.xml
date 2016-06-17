@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#eee"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ll"
+        style="@style/lv_bg_style"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dip"
+        android:divider="@color/lightGray"
+        android:dividerHeight="1px"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/txt_time"
+            style="@style/text_time_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dip"
+            android:gravity="left"
+            android:text="@string/NoHistory"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lv_history"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:cacheColorHint="#00000000"
+        android:divider="@null" >
+    </ListView>
+
+</LinearLayout>

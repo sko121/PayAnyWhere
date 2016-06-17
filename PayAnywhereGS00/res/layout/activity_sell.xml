@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/sell_reviewcart_wrapper"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal" />
+
+    <LinearLayout
+        android:id="@+id/sell_viewpager_wrapper"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical" >
+
+        <com.viewpagerindicator.TitlePageIndicator
+            android:id="@+id/sell_indicator"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="10.0dip"
+            android:textColor="@color/android_thick_orange"
+            android:textSize="12.0sp"
+            app:footerColor="@color/android_thick_orange"
+            app:footerIndicatorHeight="3.0dip"
+            app:footerIndicatorStyle="triangle"
+            app:footerLineHeight="1.0dip"
+            app:selectedBold="true"
+            app:selectedColor="@color/android_thick_orange" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/sell_pager"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_menu_search"
+        android:showAsAction="always"
+        android:title="@string/search"/>
+    <item
+        android:id="@+id/action_viewmode"
+        android:icon="@drawable/ic_action_listview"
+        android:showAsAction="ifRoom"
+        android:title="@string/view_mode">
+        <menu>
+            <item
+                android:id="@+id/action_view_list"
+                android:icon="@drawable/ic_action_listview"
+                android:title="@string/list"/>
+            <item
+                android:id="@+id/action_view_grid"
+                android:icon="@drawable/ic_action_gridview"
+                android:title="@string/grid"/>
+        </menu>
+    </item>
+    <item
+        android:id="@+id/action_sort"
+        android:icon="@drawable/ic_action_sort"
+        android:showAsAction="ifRoom"
+        android:title="@string/sort">
+        <menu>
+            <item
+                android:id="@+id/action_sort_name"
+                android:icon="@drawable/ic_action_sort"
+                android:title="@string/sort_name"/>
+            <item
+                android:id="@+id/action_sort_price"
+                android:icon="@drawable/ic_action_sort"
+                android:title="@string/sort_price"/>
+            <item
+                android:id="@+id/action_sort_category"
+                android:icon="@drawable/ic_action_sort"
+                android:title="@string/sort_category"/>
+        </menu>
+    </item> -->
+    <item
+        android:id="@+id/action_reviewcart"
+        android:icon="@drawable/ico_reviewcart_white"
+        android:showAsAction="always"
+        android:title="@string/reviewcart"
+        android:visible="true"/>
+
+</menu>

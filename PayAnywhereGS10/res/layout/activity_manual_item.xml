@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="10.0dip" >
+
+        <RelativeLayout
+            android:id="@+id/express_item_wrapper"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="beforeDescendants"
+            android:focusableInTouchMode="true" >
+
+            <com.britesky.payanywhere.ui.view.PreventCursorPositionEditText
+                android:id="@+id/price"
+                style="@style/EditTextBackground"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:inputType="numberDecimal"
+                android:text="@string/default_money"
+                android:textColor="@color/black"
+                android:textSize="40.0sp" />
+
+            <RelativeLayout
+                android:id="@+id/taxableWrapper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@id/price"
+                android:layout_below="@id/price"
+                android:orientation="horizontal"
+                android:paddingBottom="10.0dip"
+                android:paddingTop="10.0dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/taxable"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="@color/black" />
+
+                <!--
+                     <Switch
+                    android:id="@+id/taxable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+                -->
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/expand_handle"
+                android:layout_width="wrap_content"
+                android:layout_height="30.0dip"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/taxableWrapper"
+                android:layout_centerVertical="true"
+                android:textColor="@color/black" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2.0dip"
+                android:layout_below="@id/expand_handle"
+                android:background="@color/orange" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/manual_item_wrapper"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/express_item_wrapper"
+            android:animateLayoutChanges="true" >
+
+            <RelativeLayout
+                android:id="@+id/itemImageWrapper"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip" >
+
+                <ImageButton
+                    android:id="@+id/image"
+                    android:layout_width="100.0dip"
+                    android:layout_height="100.0dip"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/soft_grey"
+                    android:scaleType="fitCenter" />
+
+                <TextView
+                    android:id="@+id/plus_photo"
+                    android:layout_width="100.0dip"
+                    android:layout_height="100.0dip"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:onClick="onAddPhotoClick"
+                    android:text="@string/plus_photo"
+                    android:textAppearance="?android:textAppearanceLarge" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5.0dip"
+                    android:layout_toRightOf="@id/image"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5.0dip"
+                        android:text="@string/itemname"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="@color/black" />
+
+                    <EditText
+                        android:id="@+id/itemName"
+                        style="@style/EditTextBackground"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5.0dip"
+                        android:imeOptions="flagNavigateNext"
+                        android:inputType="text"
+                        android:textAppearance="?android:textAppearanceLarge" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/categoryLable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/itemImageWrapper"
+                android:layout_marginTop="10.0dip"
+                android:text="@string/category"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@color/black" />
+
+            <AutoCompleteTextView
+                android:id="@+id/category"
+                style="@style/EditTextBackground"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/categoryLable"
+                android:layout_marginTop="2.0dip"
+                android:imeOptions="flagNavigateNext"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/descriptionLable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/category"
+                android:layout_marginTop="10.0dip"
+                android:text="@string/description"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/description"
+                style="@style/EditTextBackground"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/descriptionLable"
+                android:imeOptions="actionNext"
+                android:inputType="textCapSentences"
+                android:maxLines="5"
+                android:minLines="5" />
+
+            <TextView
+                android:id="@+id/receiptMessageLable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/description"
+                android:layout_marginTop="10.0dip"
+                android:text="@string/receipt_message"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/receiptMessage"
+                style="@style/EditTextBackground"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/receiptMessageLable"
+                android:imeOptions="actionNext"
+                android:inputType="textCapSentences"
+                android:maxLines="5"
+                android:minLines="5" />
+
+            <TextView
+                android:id="@+id/quantityInCartLable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/receiptMessage"
+                android:layout_marginTop="10.0dip"
+                android:text="@string/quantity_in_cart"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/quantity"
+                style="@style/EditTextBackground"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/quantityInCartLable"
+                android:layout_marginTop="2.0dip"
+                android:imeOptions="flagNavigateNext"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/tagsLable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/quantity"
+                android:layout_marginTop="10.0dip"
+                android:text="@string/tags"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@color/black" />
+
+            <!--
+                 <com.nabancard.ui.view.chips.ChipsEditTextView
+                android:id="@+id/tags"
+                style="@style/EditTextBackground"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tagsLable"
+                android:inputType="textCapWords"
+                android:maxLines="5"
+                android:minLines="5" />
+            -->
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tagsLable"
+                android:layout_marginTop="20.0dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/addinventory"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textColor="@color/black" />
+
+                <!--
+                     <Switch
+                    android:id="@+id/addInventory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical" />
+                -->
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</ScrollView>

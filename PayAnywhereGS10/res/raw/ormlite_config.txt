@@ -1,0 +1,1553 @@
+#
+# generated on 2013/06/17 11:59:24
+#
+# --table-start--
+dataClass=com.britesky.payanywhere.api.DbCashRefundTransaction
+tableName=cash_refund_transactions
+# --table-fields-start--
+# --field-start--
+fieldName=_refund_amount
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_cash_sale_transaction_reference
+canBeNull=false
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_nab_pk
+indexName=cash_refund_transactions__nab_pk_idx
+# --field-end--
+# --field-start--
+fieldName=_date
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_location_latitude
+# --field-end--
+# --field-start--
+fieldName=_location_longitude
+# --field-end--
+# --field-start--
+fieldName=_note
+# --field-end--
+# --field-start--
+fieldName=_contacted_emails
+# --field-end--
+# --field-start--
+fieldName=_merchant_reference
+canBeNull=false
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_user_reference
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_pk
+generatedId=true
+indexName=cash_refund_transactions__pk_idx
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=com.britesky.payanywhere.api.DbCashSaleTransaction
+tableName=cash_sale_transactions
+# --table-fields-start--
+# --field-start--
+fieldName=_paid_amount
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_tendered_amount
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_change_amount
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_refundable_amount
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_customer
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_refunds
+foreignCollection=true
+# --field-end--
+# --field-start--
+fieldName=_sale_transaction_receipt_reference
+canBeNull=false
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_nab_pk
+indexName=cash_sale_transactions__nab_pk_idx
+# --field-end--
+# --field-start--
+fieldName=_date
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_location_latitude
+# --field-end--
+# --field-start--
+fieldName=_location_longitude
+# --field-end--
+# --field-start--
+fieldName=_note
+# --field-end--
+# --field-start--
+fieldName=_contacted_emails
+# --field-end--
+# --field-start--
+fieldName=_merchant_reference
+canBeNull=false
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_user_reference
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_pk
+generatedId=true
+indexName=cash_sale_transactions__pk_idx
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=com.britesky.payanywhere.api.DbCreditCard
+tableName=credit_cards
+# --table-fields-start--
+# --field-start--
+fieldName=_last_four
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_raw_name
+# --field-end--
+# --field-start--
+fieldName=_credit_card_network
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_pk
+generatedId=true
+indexName=credit_cards__pk_idx
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=com.britesky.payanywhere.api.DbCreditCardRefundTransaction
+tableName=credit_card_refund_transactions
+# --table-fields-start--
+# --field-start--
+fieldName=_refund_amount
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_auth_code
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_void
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_credit_card_sale_transaction_reference
+canBeNull=false
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_nab_pk
+indexName=credit_card_refund_transactions__nab_pk_idx
+# --field-end--
+# --field-start--
+fieldName=_date
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_location_latitude
+# --field-end--
+# --field-start--
+fieldName=_location_longitude
+# --field-end--
+# --field-start--
+fieldName=_note
+# --field-end--
+# --field-start--
+fieldName=_contacted_emails
+# --field-end--
+# --field-start--
+fieldName=_merchant_reference
+canBeNull=false
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_user_reference
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_pk
+generatedId=true
+indexName=credit_card_refund_transactions__pk_idx
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=com.britesky.payanywhere.api.DbCreditCardSaleTransaction
+tableName=credit_card_sale_transactions
+# --table-fields-start--
+# --field-start--
+fieldName=_paid_amount
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_requested_amount
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_authorized_amount
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_cash_back_amount
+# --field-end--
+# --field-start--
+fieldName=_refundable_amount
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_tip_amount
+# --field-end--
+# --field-start--
+fieldName=_total_amount
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_auth_code
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_is_forced
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_input_type
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_process_type
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_void
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_preauth
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_signature
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_credit_card
+canBeNull=false
+foreign=true
+foreignAutoRefresh=true
+foreignAutoCreate=true
+# --field-end--
+# --field-start--
+fieldName=_customer
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_refunds
+foreignCollection=true
+foreignCollectionEager=true
+# --field-end--
+# --field-start--
+fieldName=_sale_transaction_receipt_reference
+canBeNull=false
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_nab_pk
+indexName=credit_card_sale_transactions__nab_pk_idx
+# --field-end--
+# --field-start--
+fieldName=_date
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_location_latitude
+# --field-end--
+# --field-start--
+fieldName=_location_longitude
+# --field-end--
+# --field-start--
+fieldName=_note
+# --field-end--
+# --field-start--
+fieldName=_contacted_emails
+# --field-end--
+# --field-start--
+fieldName=_merchant_reference
+canBeNull=false
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_user_reference
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_pk
+generatedId=true
+indexName=credit_card_sale_transactions__pk_idx
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=com.britesky.payanywhere.api.DbCustomer
+tableName=customers
+# --table-fields-start--
+# --field-start--
+fieldName=_nab_pk
+indexName=customers__nab_pk_idx
+# --field-end--
+# --field-start--
+fieldName=_first_name
+# --field-end--
+# --field-start--
+fieldName=_last_name
+# --field-end--
+# --field-start--
+fieldName=_merchant_reference
+canBeNull=false
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_pk
+generatedId=true
+indexName=customers__pk_idx
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=com.britesky.payanywhere.api.DbCustomerEmailRelation
+tableName=customer_email_relations
+# --table-fields-start--
+# --field-start--
+fieldName=_customer
+canBeNull=false
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_email
+canBeNull=false
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_merchant_reference
+canBeNull=false
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_pk
+generatedId=true
+indexName=customer_email_relations__pk_idx
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=com.britesky.payanywhere.api.DbEmail
+tableName=emails
+# --table-fields-start--
+# --field-start--
+fieldName=_nab_pk
+indexName=emails__nab_pk_idx
+# --field-end--
+# --field-start--
+fieldName=_email
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_merchant_reference
+canBeNull=false
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_pk
+generatedId=true
+indexName=emails__pk_idx
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=com.britesky.payanywhere.api.DbFavorite
+tableName=favorites
+# --table-fields-start--
+# --field-start--
+fieldName=_type
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_favorited_pk
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_user_reference
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_pk
+generatedId=true
+indexName=favorites__pk_idx
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=com.britesky.payanywhere.api.DbFilter
+tableName=filters
+# --table-fields-start--
+# --field-start--
+fieldName=_nab_pk
+indexName=filters__nab_pk_idx
+# --field-end--
+# --field-start--
+fieldName=_name
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_match_all_rules
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_filter_type
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_rules
+foreignCollection=true
+foreignCollectionEager=true
+# --field-end--
+# --field-start--
+fieldName=_merchant_reference
+canBeNull=false
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_user_reference
+canBeNull=false
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_pk
+generatedId=true
+indexName=filters__pk_idx
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=com.britesky.payanywhere.api.DbMerchantAccount
+tableName=merchant_accounts
+# --table-fields-start--
+# --field-start--
+fieldName=_nab_pk
+indexName=merchant_accounts__nab_pk_idx
+# --field-end--
+# --field-start--
+fieldName=_mid
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_dba
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_last_sync
+# --field-end--
+# --field-start--
+fieldName=_pk
+generatedId=true
+indexName=merchant_accounts__pk_idx
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=com.britesky.payanywhere.api.DbMerchantUserRelation
+tableName=merchant_user_relations
+# --table-fields-start--
+# --field-start--
+fieldName=_role
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_merchant_reference
+canBeNull=false
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_user_reference
+canBeNull=false
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_pk
+generatedId=true
+indexName=merchant_user_relations__pk_idx
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=com.britesky.payanywhere.api.DbMultimediaItem
+tableName=multimedia_items
+# --table-fields-start--
+# --field-start--
+fieldName=_nab_pk
+indexName=multimedia_items__nab_pk_idx
+# --field-end--
+# --field-start--
+fieldName=_file_absolute_path
+# --field-end--
+# --field-start--
+fieldName=_byte_array
+dataPersister=BYTE_ARRAY
+# --field-end--
+# --field-start--
+fieldName=_pk
+generatedId=true
+indexName=multimedia_items__pk_idx
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=com.britesky.payanywhere.api.DbPreauthTransaction
+tableName=preauth_transactions
+# --table-fields-start--
+# --field-start--
+fieldName=_requested_amount
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_preauth_amount
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_auth_code
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_is_forced
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_input_type
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_credit_card_sale
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_void
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_credit_card
+canBeNull=false
+foreign=true
+foreignAutoRefresh=true
+foreignAutoCreate=true
+# --field-end--
+# --field-start--
+fieldName=_customer
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_sale_transaction_receipt_reference
+canBeNull=false
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_nab_pk
+indexName=preauth_transactions__nab_pk_idx
+# --field-end--
+# --field-start--
+fieldName=_date
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_location_latitude
+# --field-end--
+# --field-start--
+fieldName=_location_longitude
+# --field-end--
+# --field-start--
+fieldName=_note
+# --field-end--
+# --field-start--
+fieldName=_contacted_emails
+# --field-end--
+# --field-start--
+fieldName=_merchant_reference
+canBeNull=false
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_user_reference
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_pk
+generatedId=true
+indexName=preauth_transactions__pk_idx
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=com.britesky.payanywhere.api.DbPrinter
+tableName=printers
+# --table-fields-start--
+# --field-start--
+fieldName=_printer_alias
+# --field-end--
+# --field-start--
+fieldName=_mac_address
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_ip_address
+# --field-end--
+# --field-start--
+fieldName=_selected
+# --field-end--
+# --field-start--
+fieldName=_star_protocol_name
+# --field-end--
+# --field-start--
+fieldName=_star_response_version
+# --field-end--
+# --field-start--
+fieldName=_star_nic_product_name
+# --field-end--
+# --field-start--
+fieldName=_star_nic_firmware_version
+# --field-end--
+# --field-start--
+fieldName=_star_nic_bootloader_firmware_version
+# --field-end--
+# --field-start--
+fieldName=_star_nic_pld_version
+# --field-end--
+# --field-start--
+fieldName=_star_ip_version
+# --field-end--
+# --field-start--
+fieldName=_star_ip_protocol
+# --field-end--
+# --field-start--
+fieldName=_star_mfg
+# --field-end--
+# --field-start--
+fieldName=_star_cmd
+# --field-end--
+# --field-start--
+fieldName=_star_model
+# --field-end--
+# --field-start--
+fieldName=_star_class
+# --field-end--
+# --field-start--
+fieldName=_merchant_reference
+canBeNull=false
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_user_reference
+canBeNull=false
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_pk
+generatedId=true
+indexName=printers__pk_idx
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=com.britesky.payanywhere.api.DbReceiptInfo
+tableName=receipt_information
+# --table-fields-start--
+# --field-start--
+fieldName=_nab_pk
+indexName=receipt_information__nab_pk_idx
+# --field-end--
+# --field-start--
+fieldName=_merchant_name
+# --field-end--
+# --field-start--
+fieldName=_merchant_logo
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_address1
+# --field-end--
+# --field-start--
+fieldName=_address2
+# --field-end--
+# --field-start--
+fieldName=_city
+# --field-end--
+# --field-start--
+fieldName=_zip
+# --field-end--
+# --field-start--
+fieldName=_state
+# --field-end--
+# --field-start--
+fieldName=_country
+# --field-end--
+# --field-start--
+fieldName=_phone
+# --field-end--
+# --field-start--
+fieldName=_fax
+# --field-end--
+# --field-start--
+fieldName=_website
+# --field-end--
+# --field-start--
+fieldName=_email
+# --field-end--
+# --field-start--
+fieldName=_message
+# --field-end--
+# --field-start--
+fieldName=_disclaimer
+# --field-end--
+# --field-start--
+fieldName=_merchant_reference
+canBeNull=false
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_user_reference
+canBeNull=false
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_pk
+generatedId=true
+indexName=receipt_information__pk_idx
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=com.britesky.payanywhere.api.DbRule
+tableName=rules
+# --table-fields-start--
+# --field-start--
+fieldName=_nab_pk
+indexName=rules__nab_pk_idx
+# --field-end--
+# --field-start--
+fieldName=_attribute
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_operator
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_value
+# --field-end--
+# --field-start--
+fieldName=_transaction_type
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_filter_reference
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_pk
+generatedId=true
+indexName=rules__pk_idx
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=com.britesky.payanywhere.api.DbSaleItem
+tableName=sale_items
+# --table-fields-start--
+# --field-start--
+fieldName=_nab_pk
+indexName=sale_items__nab_pk_idx
+# --field-end--
+# --field-start--
+fieldName=_name
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_description
+# --field-end--
+# --field-start--
+fieldName=_receipt_message
+# --field-end--
+# --field-start--
+fieldName=_date_added
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_list_price_amount
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_is_taxable
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_is_active
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_image
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_merchant_reference
+canBeNull=false
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_pk
+generatedId=true
+indexName=sale_items__pk_idx
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=com.britesky.payanywhere.api.DbSaleItemCategory
+tableName=sale_item_categories
+# --table-fields-start--
+# --field-start--
+fieldName=_nab_pk
+indexName=sale_item_categories__nab_pk_idx
+# --field-end--
+# --field-start--
+fieldName=_name
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_is_active
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_merchant_reference
+canBeNull=false
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_pk
+generatedId=true
+indexName=sale_item_categories__pk_idx
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=com.britesky.payanywhere.api.DbSaleItemCategoryRelation
+tableName=sale_item_category_relations
+# --table-fields-start--
+# --field-start--
+fieldName=_nab_pk
+indexName=sale_item_category_relations__nab_pk_idx
+# --field-end--
+# --field-start--
+fieldName=_item
+canBeNull=false
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_category
+canBeNull=false
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_merchant_reference
+canBeNull=false
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_pk
+generatedId=true
+indexName=sale_item_category_relations__pk_idx
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=com.britesky.payanywhere.api.DbSaleItemTag
+tableName=sale_item_tags
+# --table-fields-start--
+# --field-start--
+fieldName=_nab_pk
+indexName=sale_item_tags__nab_pk_idx
+# --field-end--
+# --field-start--
+fieldName=_name
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_is_active
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_user_reference
+canBeNull=false
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_pk
+generatedId=true
+indexName=sale_item_tags__pk_idx
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=com.britesky.payanywhere.api.DbSaleItemTagRelation
+tableName=sale_item_tag_relations
+# --table-fields-start--
+# --field-start--
+fieldName=_nab_pk
+indexName=sale_item_tag_relations__nab_pk_idx
+# --field-end--
+# --field-start--
+fieldName=_tag
+canBeNull=false
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_item
+canBeNull=false
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_merchant_reference
+canBeNull=false
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_user_reference
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_pk
+generatedId=true
+indexName=sale_item_tag_relations__pk_idx
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=com.britesky.payanywhere.api.DbSaleTransactionReceipt
+tableName=sale_transaction_receipts
+# --table-fields-start--
+# --field-start--
+fieldName=_nab_pk
+indexName=sale_transaction_receipts__nab_pk_idx
+# --field-end--
+# --field-start--
+fieldName=_item_extended_total_amount
+# --field-end--
+# --field-start--
+fieldName=_item_discount_total_amount
+# --field-end--
+# --field-start--
+fieldName=_receipt_discount_rate
+# --field-end--
+# --field-start--
+fieldName=_receipt_discount_amount
+# --field-end--
+# --field-start--
+fieldName=_receipt_discount_total_amount
+# --field-end--
+# --field-start--
+fieldName=_receipt_subtotal_amount
+# --field-end--
+# --field-start--
+fieldName=_receipt_tax_amount
+# --field-end--
+# --field-start--
+fieldName=_receipt_tip_amount
+# --field-end--
+# --field-start--
+fieldName=_receipt_tip_percent
+# --field-end--
+# --field-start--
+fieldName=_receipt_invoice_number
+# --field-end--
+# --field-start--
+fieldName=_total_amount
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_items
+foreignCollection=true
+foreignCollectionEager=true
+# --field-end--
+# --field-start--
+fieldName=_credit_card_sale_transactions
+foreignCollection=true
+foreignCollectionEager=true
+# --field-end--
+# --field-start--
+fieldName=_cash_sale_transactions
+foreignCollection=true
+foreignCollectionEager=true
+# --field-end--
+# --field-start--
+fieldName=_preauth
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_merchant_reference
+canBeNull=false
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_user_reference
+canBeNull=false
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_pk
+generatedId=true
+indexName=sale_transaction_receipts__pk_idx
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=com.britesky.payanywhere.api.DbSaleTransactionReceiptLineItem
+tableName=sale_transaction_receipt_line_items
+# --table-fields-start--
+# --field-start--
+fieldName=_nab_pk
+indexName=sale_transaction_receipt_line_items__nab_pk_idx
+# --field-end--
+# --field-start--
+fieldName=_name
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_description
+# --field-end--
+# --field-start--
+fieldName=_receipt_message
+# --field-end--
+# --field-start--
+fieldName=_quantity
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_unit_price_amount
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_extended_price_amount
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_category_string
+# --field-end--
+# --field-start--
+fieldName=_tag_string
+# --field-end--
+# --field-start--
+fieldName=_tax_amount
+# --field-end--
+# --field-start--
+fieldName=_tax_rate
+# --field-end--
+# --field-start--
+fieldName=_is_taxable
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_discount_rate
+# --field-end--
+# --field-start--
+fieldName=_discount_amount
+# --field-end--
+# --field-start--
+fieldName=_image
+foreign=true
+foreignAutoRefresh=true
+foreignAutoCreate=true
+# --field-end--
+# --field-start--
+fieldName=_original_sale_item
+canBeNull=false
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_receipt_reference
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_pk
+generatedId=true
+indexName=sale_transaction_receipt_line_items__pk_idx
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=com.britesky.payanywhere.api.DbSettings
+tableName=settings
+# --table-fields-start--
+# --field-start--
+fieldName=_tip_enabled
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_tip_preset_1
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_tip_preset_1_type
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_tip_preset_1_enabled
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_tip_preset_2
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_tip_preset_2_type
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_tip_preset_2_enabled
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_tip_preset_3
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_tip_preset_3_type
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_tip_preset_3_enabled
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_tip_preset_4
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_tip_preset_4_type
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_tip_preset_4_enabled
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_tip_default_preset
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_tax_autorefresh
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_tax_percent
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_discount_enabled
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_invoice_autopopulate
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_signature_required
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_receipt_bcc_enabled
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_receipt_bcc_emails
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_receipt_map_enabled
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_print_cloud_enabled
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_print_star_enabled
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_merchant_reference
+canBeNull=false
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_user_reference
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_pk
+generatedId=true
+indexName=settings__pk_idx
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=com.britesky.payanywhere.api.DbTemporaryCart
+tableName=temporary_carts
+# --table-fields-start--
+# --field-start--
+fieldName=_discount_rate
+# --field-end--
+# --field-start--
+fieldName=_discount_amount
+# --field-end--
+# --field-start--
+fieldName=_subtotal_amount
+# --field-end--
+# --field-start--
+fieldName=_tax_amount
+# --field-end--
+# --field-start--
+fieldName=_total_amount
+# --field-end--
+# --field-start--
+fieldName=_cart_items
+foreignCollection=true
+foreignCollectionEager=true
+# --field-end--
+# --field-start--
+fieldName=_merchant_reference
+canBeNull=false
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_user_reference
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_pk
+generatedId=true
+indexName=temporary_carts__pk_idx
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=com.britesky.payanywhere.api.DbTemporaryCartItem
+tableName=temporary_cart_items
+# --table-fields-start--
+# --field-start--
+fieldName=_quantity
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_unit_price_amount
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_extended_price_amount
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_tax_rate
+# --field-end--
+# --field-start--
+fieldName=_tax_amount
+# --field-end--
+# --field-start--
+fieldName=_discount_rate
+# --field-end--
+# --field-start--
+fieldName=_discount_amount
+# --field-end--
+# --field-start--
+fieldName=_item
+canBeNull=false
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_temporary_cart_reference
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_merchant_reference
+canBeNull=false
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_user_reference
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_pk
+generatedId=true
+indexName=temporary_cart_items__pk_idx
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=com.britesky.payanywhere.api.DbTransaction
+tableName=dbtransaction
+# --table-fields-start--
+# --field-start--
+fieldName=_nab_pk
+indexName=dbtransaction__nab_pk_idx
+# --field-end--
+# --field-start--
+fieldName=_date
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_location_latitude
+# --field-end--
+# --field-start--
+fieldName=_location_longitude
+# --field-end--
+# --field-start--
+fieldName=_note
+# --field-end--
+# --field-start--
+fieldName=_contacted_emails
+# --field-end--
+# --field-start--
+fieldName=_merchant_reference
+canBeNull=false
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_user_reference
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_pk
+generatedId=true
+indexName=dbtransaction__pk_idx
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=com.britesky.payanywhere.api.DbUserAccount
+tableName=user_accounts
+# --table-fields-start--
+# --field-start--
+fieldName=_nab_pk
+indexName=user_accounts__nab_pk_idx
+# --field-end--
+# --field-start--
+fieldName=_user_name
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_login_key
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_security
+# --field-end--
+# --field-start--
+fieldName=_is_pattern
+# --field-end--
+# --field-start--
+fieldName=_merchant_account_login_setting
+# --field-end--
+# --field-start--
+fieldName=_default
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_pk
+generatedId=true
+indexName=user_accounts__pk_idx
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=com.britesky.payanywhere.api.DbVoidTransaction
+tableName=void_transactions
+# --table-fields-start--
+# --field-start--
+fieldName=_auth_code
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_credit_card_sale_transaction_reference
+foreign=true
+foreignAutoRefresh=true
+maxForeignAutoRefreshLevel=3
+# --field-end--
+# --field-start--
+fieldName=_credit_card_refund_transaction_reference
+foreign=true
+foreignAutoRefresh=true
+maxForeignAutoRefreshLevel=3
+# --field-end--
+# --field-start--
+fieldName=_preauth_transaction_reference
+foreign=true
+foreignAutoRefresh=true
+maxForeignAutoRefreshLevel=3
+# --field-end--
+# --field-start--
+fieldName=_nab_pk
+indexName=void_transactions__nab_pk_idx
+# --field-end--
+# --field-start--
+fieldName=_date
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=_location_latitude
+# --field-end--
+# --field-start--
+fieldName=_location_longitude
+# --field-end--
+# --field-start--
+fieldName=_note
+# --field-end--
+# --field-start--
+fieldName=_contacted_emails
+# --field-end--
+# --field-start--
+fieldName=_merchant_reference
+canBeNull=false
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_user_reference
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=_pk
+generatedId=true
+indexName=void_transactions__pk_idx
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
