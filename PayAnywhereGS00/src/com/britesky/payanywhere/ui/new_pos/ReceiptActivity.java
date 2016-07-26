@@ -61,8 +61,7 @@ public class ReceiptActivity extends Activity {
 	 * you are connecting to an Android peer then please generate your own
 	 * unique UUID.
 	 */
-	private static final UUID SPP_UUID = UUID
-			.fromString("00001101-0000-1000-8000-00805F9B34FB");
+	private static final UUID SPP_UUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
 
 	private Builder dialog = null;
 
@@ -119,8 +118,7 @@ public class ReceiptActivity extends Activity {
 		mBtnSend = (Button) findViewById(R.id.buttonSendReceipt);
 		mBtnNoSend = (Button) findViewById(R.id.buttonNoReceipt);
 
-		Typeface typeface = Typeface.createFromAsset(getAssets(),
-				"Boton-MediumItalic.ttf");
+		Typeface typeface = Typeface.createFromAsset(getAssets(), "Boton-MediumItalic.ttf");
 		mBtnSend.setTypeface(typeface);
 		mBtnNoSend.setTypeface(typeface);
 		ImageUtil.applyBrandColor(this, mBtnNoSend.getBackground());
@@ -130,12 +128,9 @@ public class ReceiptActivity extends Activity {
 		mAmount = getIntent().getStringExtra("amount");
 		mTotalAmount.setText(mAmount);
 
-		mprintfData = "\n--------------------------------\n"
-				+ "RECEIPT NO.        12345678\n" + "DATE         "
-				+ getCurrentTime() + "\n" + "APPROVAL_CODE  \n"
-				+ "APPROVAL LOCATION \n" + "SALES        \n"
-				+ "TOTAL            " + mAmount + "\n"
-				+ "--------------------------------\n\n";
+		mprintfData = "\n--------------------------------\n" + "RECEIPT NO.        12345678\n" + "DATE         "
+				+ getCurrentTime() + "\n" + "APPROVAL_CODE  \n" + "APPROVAL LOCATION \n" + "SALES        \n"
+				+ "TOTAL            " + mAmount + "\n" + "--------------------------------\n\n";
 		System.out.println(" ++++++recepit data = \n" + mprintfData);
 		init();
 
@@ -160,7 +155,6 @@ public class ReceiptActivity extends Activity {
 			}
 		}
 	}
-	
 
 	@Override
 	public void onDestroy() {
@@ -188,9 +182,7 @@ public class ReceiptActivity extends Activity {
 		setPrintColor(false);
 
 		mpairedDeviceList.add(this.getString(R.string.pls_choice_device));
-		mArrayAdapter = new ArrayAdapter<String>(this,
-				android.R.layout.simple_spinner_dropdown_item,
-				mpairedDeviceList);
+		mArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, mpairedDeviceList);
 		mSpinner.setAdapter(mArrayAdapter);
 		mSpinner.setOnTouchListener(new Spinner.OnTouchListener() {
 			@Override
@@ -203,9 +195,7 @@ public class ReceiptActivity extends Activity {
 				try {
 					if (mBluetoothAdapter == null) {
 						// mTipTextView.setText(getString(R.string.not_bluetooth_adapter));
-						Toast.makeText(mContext,
-								R.string.not_bluetooth_adapter,
-								Toast.LENGTH_LONG).show();
+						Toast.makeText(mContext, R.string.not_bluetooth_adapter, Toast.LENGTH_LONG).show();
 
 					} else if (mBluetoothAdapter.isEnabled()) {
 						String getName = mBluetoothAdapter.getName();
@@ -214,25 +204,20 @@ public class ReceiptActivity extends Activity {
 							mpairedDeviceList.remove(1);
 						}
 						if (pairedDevices.size() == 0) {
-							Toast.makeText(mContext, "No paired device.",
-									Toast.LENGTH_LONG).show();
+							Toast.makeText(mContext, "No paired device.", Toast.LENGTH_LONG).show();
 						}
 						for (BluetoothDevice device : pairedDevices) {
 							// Add the name and address to an array adapter to
 							// show in a ListView
-							getName = device.getName() + "#"
-									+ device.getAddress();
+							getName = device.getName() + "#" + device.getAddress();
 							mpairedDeviceList.add(getName);
 						}
 
 					} else {
-						Toast.makeText(mContext,
-								"BluetoothAdapter not open...",
-								Toast.LENGTH_LONG).show();
+						Toast.makeText(mContext, "BluetoothAdapter not open...", Toast.LENGTH_LONG).show();
 					}
 				} catch (Exception e) {
-					Toast.makeText(mContext, e.toString(), Toast.LENGTH_LONG)
-							.show();
+					Toast.makeText(mContext, e.toString(), Toast.LENGTH_LONG).show();
 				}
 				return false;
 			}
@@ -241,8 +226,7 @@ public class ReceiptActivity extends Activity {
 		mSpinner.setOnItemSelectedListener(new OnItemSelectedListener() {
 
 			@Override
-			public void onItemSelected(AdapterView<?> arg0, View arg1,
-					int arg2, long arg3) {
+			public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
 				sendMsg(1001);
 				System.out.println("---onItemSelected\n");
 			}
@@ -262,12 +246,10 @@ public class ReceiptActivity extends Activity {
 		public final void afterTextChanged(Editable paramEditable) {
 		}
 
-		public final void beforeTextChanged(CharSequence paramCharSequence,
-				int paramInt1, int paramInt2, int paramInt3) {
+		public final void beforeTextChanged(CharSequence paramCharSequence, int paramInt1, int paramInt2, int paramInt3) {
 		}
 
-		public final void onTextChanged(CharSequence paramCharSequence,
-				int paramInt1, int paramInt2, int paramInt3) {
+		public final void onTextChanged(CharSequence paramCharSequence, int paramInt1, int paramInt2, int paramInt3) {
 			if (validateEmail(mAutoEmail)) {
 				mCBEnableEmailing.setChecked(true);
 				mBtnSend.setEnabled(true);
@@ -292,10 +274,10 @@ public class ReceiptActivity extends Activity {
 	private CheckBox.OnCheckedChangeListener mCheckboxListener = new CheckBox.OnCheckedChangeListener() {
 
 		@Override
-		public void onCheckedChanged(CompoundButton buttonView,
-				boolean isChecked) {
-			switch (buttonView.getId()) {
-			case R.id.checkBoxEnableEmailing:
+		public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+			int id = buttonView.getId();
+
+			if (id == R.id.checkBoxEnableEmailing) {
 				if (isChecked) {
 					mBtnSend.setEnabled(true);
 					mBtnSend.setText(R.string.send_receipt);
@@ -308,9 +290,7 @@ public class ReceiptActivity extends Activity {
 					}
 					setEmailColor(false);
 				}
-				break;
-
-			case R.id.checkBoxStarPrinters:
+			} else if (id == R.id.checkBoxStarPrinters) {
 				if (isChecked) {
 					mBtnSend.setEnabled(true);
 					if (mCBEnableEmailing.isChecked() == false) {
@@ -326,10 +306,6 @@ public class ReceiptActivity extends Activity {
 					setPrintColor(false);
 
 				}
-				break;
-
-			default:
-				break;
 			}
 		}
 
@@ -337,12 +313,10 @@ public class ReceiptActivity extends Activity {
 
 	public boolean validateEmail(AutoCompleteTextView view) {
 		boolean bool = true;
-		if ((view.getText().toString() == null)
-				|| (view.getText().toString().isEmpty())) {
+		if ((view.getText().toString() == null) || (view.getText().toString().isEmpty())) {
 			// view.setError(null);
 			bool = false;
-		} else if ((view.getText().toString() != null)
-				&& (!Patterns.EMAIL_ADDRESS.matcher(view.getText()).matches())) {
+		} else if ((view.getText().toString() != null) && (!Patterns.EMAIL_ADDRESS.matcher(view.getText()).matches())) {
 			// view.setError(getString(R.string.invalid_email));
 			bool = false;
 		}
@@ -354,22 +328,20 @@ public class ReceiptActivity extends Activity {
 		@Override
 		public void onClick(View v) {
 
-			switch (v.getId()) {
-
 			// case R.id.buttonAddAdditionalEmails:
 			//
 			// break;
+			int id = v.getId();
 
-			case R.id.buttonSendReceipt: {
+			if (id == R.id.buttonSendReceipt) {
 				if (mCBEnableEmailing.isChecked() == true) {// send email
 					// sendMail();
 					SendMailThread thread = new SendMailThread();
 					thread.doStart();
-				} else if (mCBEnablePrint.isChecked() == true) {// print receipt
+				} else if (mCBEnablePrint.isChecked() == true) {// print
+																// receipt
 					if (mSelectPrint == false) {
-						Toast.makeText(mContext,
-								"Please select a valid Printer first.",
-								Toast.LENGTH_LONG).show();
+						Toast.makeText(mContext, "Please select a valid Printer first.", Toast.LENGTH_LONG).show();
 						return;
 					}
 
@@ -379,58 +351,41 @@ public class ReceiptActivity extends Activity {
 						mOutputStream.flush();
 
 						mOutputStream = mBluetoothSocket.getOutputStream();
-						mOutputStream.write(new byte[] { 0x0a, 0x0a, 0x1d,
-								0x56, 0x01 });
+						mOutputStream.write(new byte[] { 0x0a, 0x0a, 0x1d, 0x56, 0x01 });
 						mOutputStream.flush();
-						Toast.makeText(mContext, "Data sent successfully...",
-								Toast.LENGTH_LONG).show();
+						Toast.makeText(mContext, "Data sent successfully...", Toast.LENGTH_LONG).show();
 					} catch (Exception e) {
 						e.printStackTrace();
-						Toast.makeText(mContext,
-								"Print fail. " + e.getMessage(),
-								Toast.LENGTH_LONG).show();
+						Toast.makeText(mContext, "Print fail. " + e.getMessage(), Toast.LENGTH_LONG).show();
 					}
 				}
 
-			}
-				break;
-
-			case R.id.buttonNoReceipt: {
-//				CartApi.resetCart();
-//				CartApi.init();
+			} else if (id == R.id.buttonNoReceipt) {
+				// CartApi.resetCart();
+				// CartApi.init();
 				ReceiptActivity.this.finish();
 			}
-				break;
-			default:
-				break;
-			}
-
 		}
+
 	};
 
 	private void setPrintColor(boolean b) {
 		if (b) {
-			mPrintLabel.setTextColor(SystemUtil
-					.getBrandColor(getApplicationContext()));
-			ImageUtil.applyBrandColor(getApplicationContext(),
-					mPrintLabel.getCompoundDrawables()[1]);
+			mPrintLabel.setTextColor(SystemUtil.getBrandColor(getApplicationContext()));
+			ImageUtil.applyBrandColor(getApplicationContext(), mPrintLabel.getCompoundDrawables()[1]);
 		} else {
 			mPrintLabel.setTextColor(-3355444);
-			mPrintLabel.getCompoundDrawables()[1].setColorFilter(-3355444,
-					android.graphics.PorterDuff.Mode.MULTIPLY);
+			mPrintLabel.getCompoundDrawables()[1].setColorFilter(-3355444, android.graphics.PorterDuff.Mode.MULTIPLY);
 		}
 	}
 
 	private void setEmailColor(boolean b) {
 		if (b) {
-			mEmailLabel.setTextColor(SystemUtil
-					.getBrandColor(getApplicationContext()));
-			ImageUtil.applyBrandColor(getApplicationContext(),
-					mEmailLabel.getCompoundDrawables()[1]);
+			mEmailLabel.setTextColor(SystemUtil.getBrandColor(getApplicationContext()));
+			ImageUtil.applyBrandColor(getApplicationContext(), mEmailLabel.getCompoundDrawables()[1]);
 		} else {
 			mEmailLabel.setTextColor(-3355444);
-			mEmailLabel.getCompoundDrawables()[1].setColorFilter(-3355444,
-					android.graphics.PorterDuff.Mode.MULTIPLY);
+			mEmailLabel.getCompoundDrawables()[1].setColorFilter(-3355444, android.graphics.PorterDuff.Mode.MULTIPLY);
 		}
 	}
 
@@ -447,10 +402,8 @@ public class ReceiptActivity extends Activity {
 		m.setTo(toArr);
 		m.setFrom("sales@britesky.net");
 		m.setSubject(this.getString(R.string.email_subject));
-		m.setBody("Dear " + mLastName.getText().toString() + "."
-				+ mFirstName.getText().toString() + ":\n"
-				+ "This is your receipt.\n" + mprintfData
-				+ "Best Regards,\n POS");
+		m.setBody("Dear " + mLastName.getText().toString() + "." + mFirstName.getText().toString() + ":\n"
+				+ "This is your receipt.\n" + mprintfData + "Best Regards,\n POS");
 
 		try {
 			m.addAttachment(mContext.getFilesDir() + "/handwriting.png");
@@ -492,8 +445,7 @@ public class ReceiptActivity extends Activity {
 			try {
 				sendMsg(1003, getString(R.string.connecting));
 				mBluetoothDevice = mBluetoothAdapter.getRemoteDevice(temString);
-				mBluetoothSocket = mBluetoothDevice
-						.createRfcommSocketToServiceRecord(SPP_UUID);
+				mBluetoothSocket = mBluetoothDevice.createRfcommSocketToServiceRecord(SPP_UUID);
 				mBluetoothSocket.connect();
 				sendMsg(1003, getString(R.string.connected));
 				// sendMsg(1004, true);
@@ -503,8 +455,7 @@ public class ReceiptActivity extends Activity {
 				sendMsg(1003, getString(R.string.disconnect));
 				// sendMsg(1004, false);
 				mSelectPrint = false;
-				sendMsg(1002, e.toString()
-						+ "\nPlease select other bluetooth device!");
+				sendMsg(1002, e.toString() + "\nPlease select other bluetooth device!");
 			}
 
 		} else {
@@ -541,36 +492,34 @@ public class ReceiptActivity extends Activity {
 		public void handleMessage(Message msg) {
 			super.handleMessage(msg);
 			switch (msg.what) {
-			case 1001:
-				RefeshStatusThread thread = new RefeshStatusThread();
-				thread.doStart();
-				break;
+				case 1001:
+					RefeshStatusThread thread = new RefeshStatusThread();
+					thread.doStart();
+					break;
 
-			case 1002:
-				Toast.makeText(mContext, (String) msg.obj, Toast.LENGTH_LONG)
-						.show();
-				break;
+				case 1002:
+					Toast.makeText(mContext, (String) msg.obj, Toast.LENGTH_LONG).show();
+					break;
 
-			case 1003:
-				mPrintStatus.setText((String) msg.obj);
-				break;
+				case 1003:
+					mPrintStatus.setText((String) msg.obj);
+					break;
 
-			case 1004:
-				mBtnSend.setEnabled((Boolean) msg.obj);
-				break;
+				case 1004:
+					mBtnSend.setEnabled((Boolean) msg.obj);
+					break;
 
-			case 1005:
-				if (mResendMailTime < 2) {
-					mResendMailTime++;
-					SendMailThread thread1 = new SendMailThread();
-					thread1.doStart();
-				} else {
-					Toast.makeText(mContext, (String) msg.obj, Toast.LENGTH_LONG)
-					.show();
-				}
-			
-			default:
-				break;
+				case 1005:
+					if (mResendMailTime < 2) {
+						mResendMailTime++;
+						SendMailThread thread1 = new SendMailThread();
+						thread1.doStart();
+					} else {
+						Toast.makeText(mContext, (String) msg.obj, Toast.LENGTH_LONG).show();
+					}
+
+				default:
+					break;
 			}
 		}
 	};
@@ -579,7 +528,7 @@ public class ReceiptActivity extends Activity {
 		private AlertDialog dlg;
 
 		public void doStart() {
-			if (mContext==null) {
+			if (mContext == null) {
 				return;
 			}
 			dlg = new AlertDialog.Builder(mContext).create();
@@ -602,12 +551,12 @@ public class ReceiptActivity extends Activity {
 		private AlertDialog dlg;
 
 		public void doStart() {
-			if (mContext==null) {
+			if (mContext == null) {
 				return;
 			}
 			dlg = new AlertDialog.Builder(mContext).create();
 			dlg.setMessage("processing");
-//			dlg.
+			// dlg.
 			dlg.show();
 
 			this.start();
